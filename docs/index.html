@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme Team Hub — ADA Auto-Fix Test 3</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f1f5f9; color: #1e293b; }
+    header, main, footer { max-width: 760px; margin: 0 auto; padding: 16px 24px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; }
+    .icon-btn { width: 36px; height: 36px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; cursor: pointer; }
+    a { color: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Acme Team Hub</h1>
+    <p>Test page for ADA Auto-Fix. It has exactly six known accessibility violations, one per card below.</p>
+  </header>
+
+  <main>
+    <!-- 1. image-alt: image with no alt text -->
+    <section class="card">
+      <h2>Our team</h2>
+      <img src="team-photo.svg" width="240" height="120">
+    </section>
+
+    <!-- 2. button-name: icon-only button with no accessible name -->
+    <section class="card">
+      <h2>Notifications</h2>
+      <p>You have 3 unread messages.</p>
+      <button class="icon-btn"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a5 5 0 0 0-5 5v3L1 12h14l-2-3V6a5 5 0 0 0-5-5z" fill="#334155"/></svg></button>
+    </section>
+
+    <!-- 3. label: form input with no label -->
+    <section class="card">
+      <h2>Newsletter</h2>
+      <p>Get the weekly summary by email.</p>
+      <input type="email" id="newsletter-email">
+      <button type="submit">Subscribe</button>
+    </section>
+
+    <!-- 4. list: <div> directly inside <ul> -->
+    <section class="card">
+      <h2>This week</h2>
+      <ul>
+        <li>Planning meeting on Monday</li>
+        <div>Office closed on Friday</div>
+      </ul>
+    </section>
+
+    <!-- 5. definition-list: <p> directly inside <dl> -->
+    <section class="card">
+      <h2>Project facts</h2>
+      <dl>
+        <dt>Owner</dt>
+        <dd>Design team</dd>
+        <p>Last reviewed in October</p>
+      </dl>
+    </section>
+
+    <!-- 6. object-alt: embedded object with no accessible name -->
+    <section class="card">
+      <h2>Quarterly results</h2>
+      <object data="chart.svg" type="image/svg+xml" width="200" height="100"></object>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="https://github.com/vinothrajm0407/ADA-AutoFix-Test-GitHub-3">Source on GitHub</a></p>
+  </footer>
+</body>
+</html>
