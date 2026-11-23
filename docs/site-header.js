@@ -5,5 +5,5 @@
 document.currentScript.insertAdjacentHTML('beforebegin', `
 <nav class="site-nav">
   <a href="index.html">Acme Team Hub</a>
-  <button class="menu-toggle"><svg width="18" height="18" aria-hidden="true"><rect y="3" width="18" height="2"></rect><rect y="8" width="18" height="2"></rect><rect y="13" width="18" height="2"></rect></svg></button>
+  <button class="menu-toggle" aria-label="Menu Toggle"><svg width="18" height="18" aria-hidden="true"><rect y="3" width="18" height="2"></rect><rect y="8" width="18" height="2"></rect><rect y="13" width="18" height="2"></rect></svg></button>
 </nav>`);
