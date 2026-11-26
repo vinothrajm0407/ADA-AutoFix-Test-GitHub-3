@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: vinothrajm0407/ADA_tool_refactored@main
         with:
-          api-url: http://localhost:5000
+          api-url: https://colonial-privacy-matrix.ngrok-free.dev
           api-key: ${{ secrets.ADA_API_KEY }}
           # Pages to check: change to where this PR's version runs (preview / staging).
           # While it points at the live site the check passes — nothing is "new".
